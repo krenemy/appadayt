@@ -1,11 +1,11 @@
 import './App.css';
+import { Box } from '@mui/material';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './components';
 function App() {
   return (
     <BrowserRouter>
-    <div>hehe</div>
-    {/* <Box sx={{ backgroundColor: '#000' }}> */}
+    <Box sx={{ backgroundColor: '#000' }}>
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Feed />} />
@@ -13,7 +13,7 @@ function App() {
         <Route path='/channel/:id' element={<ChannelDetail />} />
         <Route path='/search/:searchTerm' element={<SearchFeed />} />
       </Routes>
-    {/* </Box> */}
+    </Box>
   </BrowserRouter>
   );
 }
